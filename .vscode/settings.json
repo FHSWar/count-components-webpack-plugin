@@ -1,0 +1,22 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.detectIndentation": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "meta.function-call",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "vue",
+    "typescript",
+    "typescriptreact",
+  ]
+}
