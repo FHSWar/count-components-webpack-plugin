@@ -36,9 +36,9 @@ var exportToExcel = function (self) {
     Object.keys(trait).forEach(function (key) {
         var flatObj = __assign(__assign({}, trait[key].components), trait[key].percentage);
         var orderedObj = {};
-        Object.keys(trait).forEach(function (innerKey) {
-            // js对象键值对是有序的，拍一下方便看
-            orderedObj = Object.keys(flatObj[innerKey])
+        Object.keys(flatObj).forEach(function (innerKey) {
+            // js对象键值对是有序的，排一下方便看
+            orderedObj = Object.keys(flatObj)
                 .sort()
                 .reduce(function (acc, cur) {
                 acc[cur] = flatObj[cur];
@@ -72,7 +72,7 @@ var calculateTraitUsage = function (self) {
                 var decimal = tp.components[component] / fileCount;
                 tp.percentage[component] = "".concat((decimal * 100).toFixed(3), "%");
             });
-            lodash.mapKeys(tp.percentage, function (_, key) { return "".concat(key, "Per"); });
+            tp.percentage = lodash.mapKeys(tp.percentage, function (_, key) { return "".concat(key, "Per"); });
         });
     });
 };

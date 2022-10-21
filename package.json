@@ -1,6 +1,6 @@
 {
     "name": "count-components-webpack-plugin",
-    "version": "1.2.18",
+    "version": "1.2.19",
     "description": "count-components",
     "main": "dist/main.js",
     "scripts": {
@@ -12,7 +12,11 @@
         "typescript",
         "rollup-bundle"
     ],
-    "author": "",
+    "author": "杜金华",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FHSWar/count-components-webpack-plugin"
+    },
     "license": "ISC",
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^15.0.0",
